@@ -10,17 +10,15 @@
     <link rel="stylesheet" type="text/css" href="css/sony_reset.css">
     <link rel="stylesheet" type="text/css" href="css/sony_main_header.css">
     <!--<link rel="stylesheet" type="text/css" href="css/sony_main_content.css">-->
-    <link rel="stylesheet" type="text/css" href="css/sony_main_slide.css">
-    <link rel="stylesheet" type="text/css" href="css/sony_main_footer.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/sony_main_slide.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="css/sony_main_footer.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-
-
 </style>
-<script>
 
-</script>
 </head>
 
 <body>
@@ -149,9 +147,20 @@
                                     <div class="expertEle"><a href="#"><span>전문가용 제품 보기</span></a></div>
                                 </div>
                                 <div class="ad_div">
-                                    <div class="history_div"><a href="#"><dl><dt>소니코리아<dd>About Sony, 소니코리아 연혁, 사회공헌, 환경 경영 이야기</dd></dt></dl></a></div>
-                                    <div class="product_div"><a href="#"><dl><dt>WF-1000XM3<dd>노이즈 캔슬링으로 몰입하다</dd></dt></dl></a></div>
-                                </div>
+                                    <div class="history_div"><a href="#"><img src="../img/friends.png" alt="광고1"/>
+                                        <div class="about_sony">
+                                            <span class="title">소니코리아</span>
+                                            <span class="info"> Sony, 소니코리아 연혁, 사회공헌, 환경 경영 이야기</span>
+                                        </div></a>
+                                    </div><!--history_div-->
+                                    
+                                    <div class="product_div"><a href="#"><img src="../img/earphones.png" alt="광고2">
+                                        <div class="about_product">
+                                            <span class="title">WF-1000XM3</span>
+                                            <span class="info">노이즈 캔슬링으로 몰입하다</span>
+                                        </div></a>
+                                    </div><!--product_div-->
+                                </div><!--ad_div-->
                             </ul> 
                         </li>
     
@@ -161,7 +170,7 @@
                             <ul class="gnb_dropmenu_wrap enter"><!--두가지 class를 같이 -->
                                 <li>
                                     <div class="reft_div"><a href="#"><span>PlayStation®Store</span></a></div>
-                                    <div class="right_div"><span>플레이션스테이션 공식 사이트<br><a href="#">플레이션스테이션 공식 사이트</a></span></div>
+                                    <div class="right_div"><a href="#"><span>플레이션스테이션 공식 사이트<p>플레이션스테이션 공식 사이트</p></span></a></div>
                                 </li>
                             </ul>
                         </li>
@@ -193,31 +202,30 @@
         <!--header end-->
 
 
-        <div class="container">
-        <!--container start-->
+        <div class="container"></div>
         <div class="text_box">
-        <!--text_box start-->  
-            <h2 class="text1">컴팩트 카메라<strong> ZV-1</strong></h2>  
-            <h1 class="text2">요즘 세대, 첫 번째 카메라</h1>
-
-            <div class="link_box">
-                <a class="detail" href="#" title="자세히 보기" target="self"><span class="detail-text">자세히 보기</span></a>
-            </div>
+                <h2 class="text1">컴팩트 카메라<strong> ZV-1</strong></h2>  
+                <h1 class="text2">요즘 세대, 첫 번째 카메라</h1>
+                <div class="link_box">
+                    <a class="detail" href="#" title="자세히 보기" target="self"><span class="detail-text">자세히 보기</span></a>
+                </div>
         </div>
+        
+        
         <section class="slide">
-        <h1 class="the_title">THE LATEST</h1>
-            <ul class="slideImages
-            ">
-                <li class=""><img src="../img/slide_img1.png" alt="사진1"/></li>
-                <li class=""><img src="../img/slide_img2.png" alt="사진2"/></li>
-                <li class=""><img src="../img/slide_img3.png" alt="사진3"/></li>
-                <li class=""><img src="../img/slide_img4.png" alt="사진4"/></li>
-                <li class=""><img src="../img/slide_img5.png" alt="사진5"/></li>
-                <li class=""><img src="../img/slide_img6.png" alt="사진6"/></li>
-                <li class=""><img src="../img/slide_img7.png" alt="사진7"/></li>
-                <li class=""><img src="../img/slide_img8.png" alt="사진8"/></li>
+            <h1 class="the_title">THE LATEST</h1>
+            <ul class="slideImages">
+                <li><img src="../img/slide_img1.png" alt="사진1"/><div class="slide_info"><p>αIII</p><span>모두를 위한 완벽한 선택<br> 당신에게 필요한 모든 것 ></span></div></li>
+                <li><img src="../img/slide_img2.png" alt="사진2"/><div class="slide_info"><p>WF-XB700</p><span>강렬한 베이스 사운드,<br>내 안의 흥을 깨우다</span></div></li>
+                <li><img src="../img/slide_img3.png" alt="사진3"/><div class="slide_info"><p>SEL1224GM</p><span>G Master 초광각 줌 FE 12-<br>24mm F2.8 GM ></span></div></li>
+                <li><img src="../img/slide_img4.png" alt="사진4"/><div class="slide_info"><P>WH-CH710N</P><span>노이즈 캔슬링 헤드폰의<br>시작</span></div></li>
+                <li><img src="../img/slide_img5.png" alt="사진5"/><div class="slide_info"><P>WH-1000XM3</P><span>노이즈 캔슬링으로<br>몰입하다 ></span></div></li>
+                <li><img src="../img/slide_img6.png" alt="사진6"/><div class="slide_info"><p>WF-SP800N</p><span>아무 걱정 없이, 모든 순간<br>몰입하다</span></div></li>
+                <li><img src="../img/slide_img7.png" alt="사진7"/><div class="slide_info"><p>α7R IV</p><span>Another Milestone ></span></div></li>
+                <li><img src="../img/slide_img8.png" alt="사진8"/><div class="slide_info"><p>RX100 VII</p><span>α9의 AF기술로 완성된 RX<br> > </span></div></li>
             </ul>
-        </div>
+        </section>
+        
         
 
 
@@ -302,94 +310,86 @@
         <!--news_img_box end-->
         </div>
         <!--news_box end-->
-     </div>
-     <!--container end-->
+   
 
 
-    <footer>
-    <!--footer start--> 
+   
+ 
         <div class="footer_wrap"> 
-            <nav>
-                <ul class="footer_menu">
-                    <li class="first_title"><span>매장찾기</span>
-                        <ul>
-                            <li><a href="#" class="lists">직영점 안내</a></li>
-                        </ul>
-                    </li>
-                    <li class="first_title"><span>고객지원</span>
-                        <ul>
-                            <li><a href="#" class="lists">소니코리아 고객지원</a></li>
-                            <li><a href="#" class="lists">소니스토어 고객지원</a></li>
-                            <li><a href="#" class="lists">방송/업무용 솔루션 고객지원</a></li>
-                            <li><a href="#" class="lists">매장찾기</a></li>
-                        </ul>
-                    </li>
-                    <li class="first_title"><span>제품정보</span>
-                        <ul>
-                            <li><a href="#" class="lists">소비자 가전</a></li>
-                            <li><a href="#" class="lists">전문가용 제품 및 솔루션</a></li>
-                            <li><a href="#" class="lists">전자부품</a></li>
-                        </ul>
-                    </li>
-                    <li class="first_title"><span>뉴스 및 정보</span>
-                        <ul>
-                            <li><a href="#" class="lists">뉴스/보도자료</a></li>
-                            <li><a href="#" class="lists">Investor Relations</a></li>
-                        </ul>
-                    </li>
-                </ul>   
-                <!--footer menu end--> 
-            </nav> 
-
-            <div class="footer_bar">
-                <div class="national"><a href="#" target="_blank"><img src="img/korea.png" alt="국적"><span>대한민국</span></a></div><!--national end-->
-                    <ul class="introduce">
-                       <li class="numbering"><a href="#" target="_blank"><span>회사소개</span></a></li>
-                       <li class="numbering"><a href="#" target="_blank"><span>환경경영</span></a></li>
-                       <li class="numbering"><a href="#" target="_blank"><span>사회공헌</span></a></li>
+            <footer>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="">매장찾기</a>
+                            <ul>
+                                <li><a href="#">직영점 안내</a></li>   
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">고객지원</a>
+                            <ul>
+                                <li><a href="#">소니코리아 고객지원</a></li>
+                                <li><a href="#">소니스토어 고객지원</a></li>
+                                <li><a href="#">방송/업무용 솔루션 고객지원</a></li>
+                                <li><a href="#">매장찾기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">제품정보</a>
+                            <ul>
+                                <li><a href="#">소비자 가전</a></li>
+                                <li><a href="#">전문가용 제품 및 솔루션</a></li>
+                                <li><a href="#">전자부품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">뉴스 및 정보</a>
+                            <ul>
+                                <li><a href="#" class="lists">뉴스/보도자료</a></li>
+                                <li><a href="#" class="lists">Investor Relations</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                <div class="sns1"><a src="#" target="_blank"><img src="img/youtube.png" alt="소셜미디어"></a></div>    
-                <div class="sns2"><a src="#" target="_blank"><img src="img/facebook.png" alt="소셜미디어"></a></div>
-                <div class="sns3"><a src="#" target="_blank"><img src="img/instagram.png" alt="소셜미디어"></a></div>
-            </div>
-            <!--footer_bar end-->
-            
-    
+                </nav>  
+                <div class="footer_etc">
+                        <div class="national"><a href="#" target="_blank"><img src="img/korea.png" alt="국적"><span>대한민국</span></a></div>
+                        <ul class="sns">
+                            <li><a src="#" target="_blank"><img src="img/youtube.png" alt="소셜미디어"></a></li>  
+                            <li><a src="#" target="_blank"><img src="img/facebook.png" alt="소셜미디어"></a></li>
+                            <li><a src="#" target="_blank"><img src="img/instagram.png" alt="소셜미디어"></a></li>
+                        </ul>                        
+                        <ul class="introduce">
+                            <li><a href="#" target="_blank"><span>회사소개</span></a></li>
+                            <li><a href="#" target="_blank"><span>환경경영</span></a></li>
+                            <li><a href="#" target="_blank"><span>사회공헌</span></a></li>
+                        </ul>
+                </div><!--footer_etc-->
                 <div class="information">
-                <div class="information_line1"><span>COPYRIGHT © 2019. SONY KOREA CORPORATION. ALL RIGHTS RESERVED.</span></div>
-                   <ul class="linked">
-                      <li class="info_linked"><a href="#" target="_blank"><span>이용약관</span></a></li>
-                      <li class="info_linked"><a href="#" target="_blank"><span>개인정보취급방침</span></a></li>
-                      <li class="info_linked"><a href="#" target="_blank"><span>이메일주소무단수집거부</span></a></li>
-                      <li class="info_linked"><a href="#" target="_blank"><span>SSL보안인증</span></a></li>
-                   </ul> 
-                <div class="information_line2"><span>사업장주소 :서울특별시 영등포구 국제금융로 10 원아이에프씨 24F<br>
-                사업자등록번호 :106-81-23810<br>통신판매번호 2012-서울영등포-1038 소니코리아 (주)<br>
-                대표이사 : Okura Kikuo | 개인정보관리책임자 : Okura Kikuo<br>
-                본 사이트의 컨텐츠는 저작권법의 보호를 받는 바,<br>상업적 목적의 무단전재, 복사, 배포 등을 금합니다.<br>
-                TEL : 소니코리아 고객지원센터 1588-0911 E-MAIL :</span><div class="mail" href="#" target="_blank"><span>cshelp@sony.co.kr</span></a></div>
-                </div>     
-            
+                    <p>COPYRIGHT © 2019. SONY KOREA CORPORATION. ALL RIGHTS RESERVED.</p>
+                    <ul>
+                        <li><a href="#" target="_blank"><span>이용약관</span></a></li>
+                        <li><a href="#" target="_blank"><span>개인정보취급방침</span></a></li>
+                        <li><a href="#" target="_blank"><span>이메일주소무단수집거부</span></a></li>
+                        <li><a href="#" target="_blank"><span>SSL보안인증</span></a></li>
+                    </ul> 
+                    <span>사업장주소 :서울특별시 영등포구 국제금융로 10 원아이에프씨 24F<br>
+                        사업자등록번호 :106-81-23810<br>통신판매번호 2012-서울영등포-1038 소니코리아 (주)<br>
+                        대표이사 : Okura Kikuo | 개인정보관리책임자 : Okura Kikuo<br>
+                        본 사이트의 컨텐츠는 저작권법의 보호를 받는 바,<br>상업적 목적의 무단전재, 복사, 배포 등을 금합니다.<br>
+                        TEL : 소니코리아 고객지원센터 1588-0911 E-MAIL : cshelp@sony.co.kr
+                    </span>
                 </div>
-                <!--information end-->   
-  
+            </footer>    
+        </div><!--footer_wrap-->                  
+                       
+
             
-
-
-
-
-    
-    
-    
-        </div>
-        <!--footer wrap end-->
-    </footer>
-    <!--fotter end-->
     </div>
     <!--wrap end-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   
+    
+
+
     <script>
         //햄버거 메뉴 오픈
         const pageElem = document.querySelector('#page_wrap_outer');
@@ -460,6 +460,72 @@
                bigSite.classList.add('on');
             }
         }
+
+        //slider
+        $(document).ready(function() {
+            $('.slideImages').bxSlider({
+                minSlides: 1,
+                maxSlides: 4,
+                slideWidth: 380,
+                slideMargin: 20
+            });
+            
+        });
+
+        //footer
+        var menu = document.querySelector(".menu");
+        var menuA = menu.querySelectorAll("a");
+        var menuLis = menu.querySelectorAll("li");
+        var resizeWork;
+
+        // 서브메뉴 체크 & 리셋
+        menuReset();
+        function menuReset() {
+            menuLis.forEach(function(item) {
+                item.classList.remove("active");
+                if(item.querySelector("ul")){
+                   item.classList.add("sub");
+                }
+            });
+        }
+
+        var mobliefooter = {
+            openMenu: function (ev) {
+                if(!ev.target.parentNode.classList.contains("active")){
+                    ev.target.parentNode.classList.add("active");
+                }else{
+                    ev.target.parentNode.classList.remove("active");
+                }
+                ev.preventDefault();
+            },
+            clickWork: function (ev) {
+                ev.preventDefault(); 
+                if(ev.target.nodeName !=="A"){
+                    return;
+                }
+                if(ev.target.parentNode.classList.contains("active")){
+                   ev.target.parentNode.classList.remove("active")
+                }else {
+                   ev.target.parentNode.classList.add("active")
+                }
+                      
+            },
+            start: function () {
+                console.log('ss')
+                menu.addEventListener("click", mobliefooter.clickWork);
+            }
+        }
+
+        // 사이즈 체크 후 함수처리
+        sizeCheck();
+        function sizeCheck() {
+            var windowWidth = document.body.clientWidth
+            if(windowWidth < 950){
+                mobliefooter.start();
+            }
+        }
+
+        
     </script>
     
 </body>
