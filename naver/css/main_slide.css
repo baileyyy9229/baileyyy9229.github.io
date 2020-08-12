@@ -1,0 +1,154 @@
+.container{
+    padding: 80px 0 160px; /* 위, 양옆, 아래 */
+}
+
+.main_slide{
+    position: relative; /* '나'를 기준으로 움직여줘 */
+    overflow: hidden;  /* slide 400% 선언으로 인한 가로 스크롤 제거 */
+}
+
+.slide_info_container{
+    position: absolute; /* float는 띄우고 밑에 컨텐츠가 들어오질 못한다. 그러나 absolute는 그 밑으로 컨텐츠가 들어온다 */
+    top: 0; /* aboslue의 기준으로 top 0 */
+    width: 100%;
+    height: 100%;
+}
+
+.slide_item{
+    float: left;
+    width: 25%;
+    /* 한 줄로 이미지들이 25%씩 짤려서 들어간다 */
+}
+
+.slide_item img{
+    width: 100%; /* 한 줄로 이미지들이 100%씩 들어간다 */
+}
+
+.slide{
+    width: 400%; /* 25%씩 짤려서 들어가던게 한 이미지당 100%의 값을 주고 .slide에 400%를 주어서 100%씩 4장으로 나온다 */
+}
+
+
+
+.slide:after{
+    content:'';
+    display: block;
+    clear: both;
+    /* .slide 뒤에 가상의 요소(clear: both)를 만들어 놓으면 다음에 오는 컨텐츠는 영향을 받지 않는다(float 영향 X) */
+}
+
+.slide_info_box{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative; /* slide logo의 abslute */
+    /* 마우스커서가 이미지 어디에 두던 클릭이 가능해지도록 변경된다 */
+}
+
+.slide_logo{
+    position: absolute; /* 내가 원하는 위치로 가고싶으면 position: absolure; */
+    right: 160px;
+    background: url(../img/sprite.png) no-repeat;
+    -webkit-background-size:474px 1250px;
+    background-size:474px 1250px; 
+}
+
+.slide_logo.smartlens{ /* .slde_logo. smartlens 면 둘을 따로 부르겠다. 하지만 붙여쓴다면 부모자식관계로 그 클래스 값 하나만 불러오겠다 */
+    width: 190px;
+    height: 38px;
+    background-position: 0 -1062px;
+    bottom: 78px;
+}
+
+.slide_text_box{
+    position: absolute;
+    left: 160px;
+    bottom: 157px;
+}
+
+.slide_title{
+    font-family: "NamumSquare",나눔고딕, 돋움,"Dotum",sans-serif;
+    margin-bottom: 32px;
+    font-size: 36px;
+}
+
+.slide_title strong{
+    display: table-cell; 
+    vertical-align: middle;
+    height: 92px;
+}
+
+.slide_text{
+    font-size: 15px;
+}
+
+.slide_txtx span{
+    display: table-cell;
+    vertical-align: middle;
+    height: 48px;
+}
+
+/* 프로그레스바 */
+.slide_propressbar{
+    position: absolute;
+    left: 160px;
+    bottom: 221px;
+    width: calc(100% - 320px); /* calc 마이너스 사이에 띄어쓰기는 꼭! */
+    height: 1px; /* 두께 값*/
+    background-color: rgba(225, 255, 255, 0.3);    
+}
+
+.slide_propressbar .fill{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background-color: #fff;
+}
+
+.slide_paging{
+    position: absolute;
+    left: 160px;
+    bottom: 114px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "NamumSquare",나눔고딕,돋움,"Dutum,sans-serif";
+}
+
+.slide_paging .current{
+    padding-right: 16px;
+    border-right: 1px solid #d6d6d5;
+}
+
+.slide_paging .total{
+    padding-left:14px;
+}
+
+.btn_prev, .btn_next{
+    position: absolute;
+    bottom: 198px;
+    width: 46px;
+    height: 46px;
+    background: url("../img/sprite.png") no-repeat;
+    -webkit-background-size:474px 1250px;
+    background-size:474px 1250px; 
+    opacity: .8;
+    filter: alpha(opacity=80);
+    border: 0px;
+}
+
+.btn_prev{
+    left: 85px;
+    background-position: -296px -99px;
+}
+
+.btn_next{
+    right: 85px;
+    background-position: -346px -99px;
+}
+
+.btn_prev:hover, .btn_prev:focus, .btn_next:hover, .bntn_next:focus{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}

@@ -1,0 +1,458 @@
+.main_content{
+    max-width: 100%;
+    padding: 0 160px 120px; /* 위, 양옆, 아래 */
+}
+
+/* content_summary start */
+/* NEWS, CAREER, STOCK, 결산공고 */
+.content_summary{
+    margin-top: 67px;
+    /* border: 1px solid red; */
+}
+
+.summary_container{
+    float: left; /* 세로로 떨어지던 컨텐츠들이 한줄로 나열된다 */
+    width: 26.6%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.summary_container:last-child{ 
+    width: 20.2%;
+    padding-right: 0;
+    /* last-child인 결산공고가 세로 밑으로 떨어지던게 한줄로 나열된다 */
+}
+
+.summary_container:first-child{
+    padding-left: 0;
+    /* border로 바짝 붙히기 */
+}
+
+.content_summary:after{
+    content: '';
+    display: block;
+    clear: both;
+    /* block, clear both를 해줘야 다음에 들어 올 아이가 영향 받지 않고 잘들어 올 수 있다 */
+}
+
+.content_container:after{
+    content: '';
+    display: block;
+    clear: both;
+    /* block, clear both를 해줘야 다음에 들어 올 아이가 영향 받지 않고 잘들어 올 수 있다 */    
+}
+
+/* h3 title */
+.summary_title{
+    font-family: NanumSquare-EB, 나눔고딕, 돋움, Dotum, sans-serif;
+    font-size: 14px;
+    color: #212121;
+}
+
+.news_box{
+    width: 100%;
+    height: 76px;
+    margin: 31px 0 30px; /* 위, 좌우, 아래 */
+}
+
+.news_title{
+    display: block; /* 공감각 생성 */
+    white-space: nowrap; /* 텍스트가 한줄로 이어진다(border 밖으로 나간다) */
+    text-overflow: ellipsis; /* 글씨가 작아진다? */
+    overflow: hidden; /* 그 줄안에서 넘쳐나는 글자는 ... 으로 표시 */
+    font-family: NanumSquare-B, 나눔고딕, 돋움, Dotum, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.news_text{ /* P태그 값 block 요쇼 */
+    height: 44px;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+    color: #878890;
+    line-height: 1.6; /* 1.2가 기본값 */
+}
+
+.news_box a:hover .news_title, .news_box a:focus .news_title{ /* a태그에 hover or focus 했을 때 */
+    text-decoration: underline; /* 텍스트 밑줄 */
+}
+
+.career_text{ /* P태그 block 요소 */
+    height: 76px;
+    margin: 31px 0 30px;
+    font-family: NanumSquare-EB, 나눔고딕, 돋움, Dotum, sans-serif; /* 영어 폰트 사이에 띄어쓰기가 있으면 "" 로 묶어줘야하고 띄어쓰기가 없으면 그냥 써도된다 */
+    font-size: 18px;
+    color: #333;
+}
+
+/* stock */
+.stock_info_box{
+    height: 76px;
+    margin: 23px 0 38px;
+    color: #333;
+}
+
+.price{
+    float: left;
+    font-family: NanumSquare-EB, 나눔고딕, 돋움, Dotum, sans-serif;
+    font-size: 36px;
+    letter-spacing: -1.7px; /* 글자 사이를 조금 줄여보자 */
+
+}
+
+.unit{
+    font-size: 12px;
+    /* '원' 작게 */
+    font-family: NanumSquare-B, 나눔고딕, 돋움, Dotum, sans-serif;
+}
+
+.figure.type{
+    float: right;
+}
+
+.figure{
+    margin-top: 21px;
+    /* figure 값이 조금 밑으로 떨어진다 */
+}
+.stock_price_box:after{
+    content: '';
+    display: block;
+    clear: both;
+    /* float 값 초기화 */
+}
+
+.stock_price_box{
+    padding-bottom: 8px;
+}
+
+.figure.type:before{
+    content: '';
+    display: inline-block; /* 500원이랑 같이 동일 선상에 있지만 앞에 있어야하므로 inline 그리고 넓이와 높이 값을 줘야하므로 block */
+    width: 10px;
+    height: 6px;
+    background: url('../img/sprite.png') no-repeat;
+    background-size: 473px 1250px; /* 원래의 사이즈 값 */
+    -webkit-background-size:473px 1250px; /* 크롬, 파이어폭스의 브라우저를위해 한번 더 선언해줘야 한다 */
+    background-position: -287px -38px; /* 원하는 이미지의 좌표 찾기 */
+    margin-right: 10px;
+}
+
+.date{
+    text-align: right;
+    margin-top: 12px;
+    font-size: 12px;
+    font-family: NanumSquare-L, 나눔고딕, 돋움, Dotum, sans-serif;
+    color: #878890;
+}
+
+.summary_link{
+    padding-right: 32px;
+    font-family: NanumSquare-B, 나눔고딕, 돋움, Dotum, sans-serif;
+    font-size: 15px;
+    color: #333;
+    position: relative;
+}
+
+.icon_arrow{
+    display: block; /* 공간이 없어서 공간 만들기 */
+    width: 18px; /* 정사각형 만들기 */
+    height: 18px;
+    position: absolute; /* 부모인 summary_link에 relative 넣어주어야 자식인 icon_arrow가 absolute 사용이 가능함 */
+    right: 0; /* absolute 선언 이후 right로 0 , top으로 -1 값 이동해라 */
+    top: -1px;
+}
+
+.icon_arrow:before{
+    content: '';
+    position: absolute;
+    width: 5px; /* 공간 만들기 */
+    height: 8px;
+    top: 50%; /* 아이콘 이미지를 정가운데 넣어주기 */
+    left: 50%; /* 아이콘 이미지를 정가운데 넣어주기 */
+    background: url('../img/sprite.png') no-repeat;
+    background-size: 474px 1250px;
+    -webkit-background-size: 474px 1250px;
+    background-position: -102px -50px;
+    transform: translate(-50%, -50%); /* 센터값 찾기: 역방향으로 translate -50 -50이 필요하다 */
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.summary_link:hover, .summary_link:focus{ /* hover or focus 했을 때 */
+    text-decoration: underline;
+}
+
+.summary_link:hover .icon_arrow, 
+.summary_link:focus .icon_arrow{
+    background-color: #00c73c;
+}
+
+.summary_link:hover .icon_arrow:before, 
+.summary_link:focus .icon_arrow:before{
+    width: 6px;
+    height: 10px;
+    background-position: -108px -49px;
+    /* 꺽쇠의 색이 회색에서 흰색으로 처리되는 코딩 */
+}
+
+/* content_summary end */
+
+
+
+/* content_service start */
+/* 사진 9개 삽입 및 텍스트 올라오기  */
+.content_service{
+    margin-top: 98px;
+    /* content_summary와 간격 벌이기 */
+}
+
+.service_list_container{
+	font-size: 0;
+
+}
+
+.service_thumbnail_box{
+	display: inline-block;
+	width: 33.3%;
+	padding-top:25%;
+	
+    background-size: cover;
+   -webkit-background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+
+   position: relative;
+}
+
+.service_thumbnail_box.list1{
+	background-image: url('../img/img_main_content1.png');
+}
+.service_thumbnail_box.list2{
+	background-image: url('../img/img_main_content2.png');
+}
+.service_thumbnail_box.list3{
+	background-image: url('../img/img_main_content3.png');
+}
+.service_thumbnail_box.list4{
+	background-image: url('../img/img_main_content4.png');
+}
+.service_thumbnail_box.list5{
+	background-image: url('../img/img_main_content5.png');
+}
+.service_thumbnail_box.list6{
+	background-image: url('../img/img_main_content6.png');
+}
+.service_thumbnail_box.list7{
+	background-image: url('../img/img_main_content7.png');
+}
+.service_thumbnail_box.list8{
+	background-image: url('../img/img_main_content8.png');
+}
+.service_thumbnail_box.list9{
+	background-image: url('../img/img_main_content9.png');
+}
+
+.service_thumbnail_box:nth-child(2),
+.service_thumbnail_box:nth-child(5),
+.service_thumbnail_box:nth-child(8){
+	width: 33.4%;
+}
+
+
+.thumbnail_dimmed{
+	display: block;
+	font-size: 15px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(58, 62, 80, 0.5);
+
+	opacity: 0;
+	filter: alpha(opacity=0);
+	transition: opacity .3s;
+    -webkit-transition: opacity .3s;
+    overflow: hidden; /* bottom이 없어서 마지막 줄 사진들에서 텍트스가 사진 밑으로도 나오는걸 해결 할 수 있다 */
+}
+
+.thumbnail_dimmed dl dt{ /* 제목 */
+font-family: NanumSquare-EB, 나눔고딕, 
+	돋움, Dotum, sans-serif;
+	font-size: 22px;
+	color: #fff; 
+	margin-bottom: 2px;
+
+}
+
+.thumbnail_dimmed dl dd{ /* 설명 */
+   font-family: NanumSquare-L, 나눔고딕, 
+	돋움, Dotum, sans-serif;
+	color: #fff; 
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    overflow: hidden;
+    /* text-overflow: ellipsis, white-space: nowra, overflow: hidden 이 세개를해줘야 dd(설명) 한줄로 들어간다  */
+
+}
+
+.thumbnail_dimmed dl{ /* 텍스트 박스 */
+	position: absolute;
+	padding-left: 30px;
+	bottom: -130px;
+	padding-top: 50px;
+	width: 100%;
+
+	transition: bottom 0.3s;
+	-webkit-transition: bottom 0.3s;
+	}
+
+.thumbnail_dimmed dl:before{
+	content: '';
+/*위치 */
+position: absolute;
+top: 0;
+left: 30px;
+/*공간-사이즈 */
+width: 23px;
+height: 23px;
+/*백그라운 이미지 선언 */
+background: url('../img/sprite.png') no-repeat; 
+background-size: 474px 1250px;
+-webkit-background-size: 474px 1250px;
+/*백그라운드 위치 값 */
+background-position: -199px -129px;
+
+
+}
+
+
+/*hover style---opcity */
+
+.thumbnail_dimmed:focus{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+
+.service_thumbnail_box:hover .thumbnail_dimmed{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/*hover style---bottom-up */
+
+.thumbnail_dimmed:focus dl{
+	bottom: 30px;
+}
+
+.service_thumbnail_box:hover .thumbnail_dimmed dl{
+	bottom: 30px;
+}
+
+/* content_service end */
+
+/* content-support start */
+.content_support{
+    margin-top: 112px;
+    text-align: center;
+}
+
+.support_title{
+    margin-bottom: 17px; /* 개인의 다양한~ 과의 margin 값 떨어뜨리기 */
+    font-family: NanumSquare-B, 나눔고딕, 
+    돋움, Dotum, sans-serif;
+    font-size: 32px;
+    color: #212121;
+}
+
+.support_text{
+    margin-bottom: 134px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+.text_line {
+    color: #878890;
+}
+
+ul.support_list_container{
+    max-width: 1360px;
+    margin: 0 auto; /* 위아래 0 좌우 auto --> 가운데 정렬 */
+}
+
+li.support_list_box{ /* 4개의 그림 삽입 */
+    width: 25%;
+    float: left; /* 밑으로 텍스트가 들어오기 때문에 float */
+}
+
+/* float clear = float를 썼으면 clear both를 꼭 시켜야한다 */
+ul.support_list_container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+li.support_list_box a{
+    display: block; /* a로 싸고있기때문에 inline 안해도된다 */
+    width: 100%;
+    padding: 135px 10px 0; /* 위, 좌우, 아래 */
+    position: relative; 
+}
+
+li.support_list_box a:before{
+    content: '';
+    position: absolute; /* 자식이 absolute를 가지고 있으려면 부모가 relative를 가져야한다 */
+    height: 100px;
+    top: 0;
+    left: 50%; /* border에서 50% */
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url(../img/sprite.png) no-repeat;
+    -webkit-background-size: 474px 1250px;
+    background-size: 474px 1250px;
+}
+
+li.support_list_box a.creators:before{
+    width: 87px;
+    background-position: 0 -957px;
+}
+
+li.support_list_box a.business:before{
+    width: 101px;
+    background-position: -97px -957px;
+}
+
+li.support_list_box a.developers:before{
+    width: 110px;
+    background-position: -199px -957px;
+}
+
+li.support_list_box a.flower:before{
+    width: 93px;
+    background-position: -316px -957px;
+}
+
+.support_list_box a:hover dt,
+.support_list_box a:focus dt{
+    text-decoration: underline;
+}
+
+.support_list_box dt{
+    margin-bottom: 10px;
+    font-family: NanumSquare-B, 나눔고딕, 
+    돋움, Dotum, sans-serif;
+    font-size: 16px;
+    color: #00c73c;
+}
+
+.suport_list_box dd{
+    font-size: 15px;
+    color: #878890;
+    line-height: 1.6;
+}

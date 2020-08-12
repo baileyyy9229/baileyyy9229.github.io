@@ -110,6 +110,7 @@
 #wrap {
     width: 100%;
     /* overflow: hidden; */
+    position: relative;
 
 }
 header {
@@ -636,25 +637,25 @@ li.gnb_menu_list:nth-child( 4){
     position: relative;
     display: block;
 }
-.text_box{
+.text_box {
     position: absolute;
     width: 550px;
     height: 283px;
     top: 200px;
     left: 180px;
 }
-h2.text1{
+p.text1 {
     font-size: 20px;
     color: white;   
     margin-left: 30px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
-.text1 > strong{
+.text1 > strong {
     font-size: 20px;
     color: white;
     margin-top: 30px;
 }
-h1.text2{
+span.text2 {
     font-size: 40px;
     color: white;
     margin-left: 30px;
@@ -689,6 +690,7 @@ h1.text2{
 }
 .slide {
     margin-top: 50px;
+    margin-left: 8%;
 }
 .slideImages {
     min-width: 100%;
@@ -719,14 +721,14 @@ h1.text2{
     font-size: 30px;
     color: #2f353d;
     font-weight: bold;
-    left: 150px;
+    left: 8%;
 }
 .product_box{
     position: relative;
     width: 1500px;
     height: 684px;
     top: 0;
-    left: 150px;
+    left: 8%;
 }
 .promo{
     position: absolute;
@@ -929,12 +931,13 @@ h1.text2{
 }
 .news_box{
     position: relative;
-    width: 1900px;
-    top: 0;    
+    width: 100%;
+    top: 0; 
+    background-color: #f1f5f9;
 }
 .news{
     position: relative;
-    min-width: 1210px;
+    width: 100%;
     height: 50px;
     font-size: 30px;
     font-weight: bold;
@@ -943,11 +946,16 @@ h1.text2{
     background-color: #f1f5f9;
     border-bottom: 3px solid #c0c0c0;
 }
+.news span {
+    position: absolute;
+    left: 8%;
+}
 .news_img_box{
     position: relative;
-    min-width: 1900px;
+    width: 100%;
     height: 600px;
     top: 0;
+    left: 8%;
     background-color: #f1f5f9;
 }
 .news_item_box1{
@@ -955,7 +963,6 @@ h1.text2{
     width: 400px;
     height: 530px;
     top: 30px;
-    left: 150px;
     background-color: #212530;
 }
 .news_item_img1 img{
@@ -978,17 +985,9 @@ h1.text2{
 .news_item_box2{
     position: absolute;
     width: 400px;
-    height: 500px;
-    top: 30px;
-    left: 600px;
-    background-color: #212530;
-}
-.news_item_box2{
-    position: absolute;
-    width: 400px;
     height: 530px;
     top: 30px;
-    left: 600px;
+    left: 450px;
     background-color: #212530;
 }
 .news_item_img2 img{
@@ -1013,7 +1012,7 @@ h1.text2{
     width: 400px;
     height: 530px;
     top: 30px;
-    left: 1050px;
+    left: 900px;
     background-color: #212530;
 }
 .news_item_img3 img{
@@ -1175,16 +1174,16 @@ footer nav {
     .text_box{
         position: static;
     }
-    h2.text1 ,h2.text1 > strong{
+    span.text1 ,span.text1 > strong{
         color: #4f6b85;
     }
-    h1.text2{
+    p.text2{
         color: #000000;
     }
     header {
         min-width: auto;
     }
-    h1.header_logo {
+    p.header_logo {
         float: none;
         margin: 0 auto;
     }
@@ -1221,9 +1220,6 @@ footer nav {
         margin-top: -20px;
     }
     /* footer */
-    footer {
-    
-    }
     footer .menu > ul > li {
         height: 50px;
         overflow: hidden;
@@ -1307,10 +1303,27 @@ footer nav {
         left: 0;
     }
     */
-
+    .text_box {
+        margin-top: 50px;
+    }
+    .text_box p {
+        color: #2f353d;;
+    }
+    .text_box strong {
+        color: #2f353d;;
+    }
+    .text_box span {
+        color: #111111;
+    }
+    .detail span  {
+        color: #FFFFFF;
+    }
     .national, .introduce, .information, .sns {
         display: none;
     }
+  
+    /* section news */
+
 }
 /* 950 이상 1280이하 */
 @media screen and (min-width: 950px) and (max-width: 1280px) {
@@ -1336,6 +1349,7 @@ footer nav {
     .sns , .national {
         margin: 0;
     }
+
 }
 /* 1281이상 */
 @media screen and (min-width: 1281px) {

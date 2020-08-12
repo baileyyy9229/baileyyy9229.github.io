@@ -1,0 +1,693 @@
+#wrap {
+    height: auto;
+}
+/* reset code */
+body,h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {
+    margin: 0;
+    padding: 0;
+}
+li,ol,ul {
+    list-style: none;
+}
+fieldset {
+    border: 0;
+}
+img {
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.blind {
+    visibility: hidden;
+    text-indent: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+/* common code */
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font-style: normal;
+  line-height: 1.4;
+  -webkit-text-size-adjust: none;
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: local(NanumBarunGothic);
+  src: url("../font/NanumBarunGothic.eot");
+  src: url("../font/NanumBarunGothic.woff") format("woff"), url("https://www.navercorp.com/font/NanumBarunGothic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NanumSquare-L';
+  src: local(NanumSquareOTFLight);
+  src: url("../font/NanumSquareOTFLight.eot");
+  src: url("../font/NanumSquareOTFLight.woff") format("woff"), url("../../font/NanumSquareOTFLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  src: local(NanumSquareOTFRegular);
+  src: url("../font/NanumSquareOTFRegular.eot");
+  src: url("../font/NanumSquareOTFRegular.woff") format("woff"), url("../../font/NanumSquareOTFRegular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NanumSquare-B';
+  src: local(NanumSquareOTFBold);
+  src: url("../font/NanumSquareOTFBold.eot");
+  src: url("../font/NanumSquareOTFBold.woff") format("woff"), url("../../font/NanumSquareOTFBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'NanumSquare-EB';
+  src: local(NanumSquareOTFExtraBold);
+  src: url("../font/NanumSquareOTFExtraBold.eot");
+  src: url("../font/NanumSquareOTFExtraBold.woff") format("woff"), url("../../font/NanumSquareOTFExtraBold.otf") format("opentype");
+}
+/* header start */
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 70px;
+    border-bottom: 2px solid #ddd;
+    background-color: #fff;
+}
+.the_header {
+    width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+h1.logo {
+    width: 126px;
+    height: 30px;
+    background: url('../img/logo_black.png') no-repeat 0 0 / cover;
+    background-size: contain;
+    float: left;
+    margin-top: 20px;
+    margin-left: 0;
+}
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ul.nav_menu {
+    text-align: right;
+}
+li.nav_sub  {
+    display: inline-block;
+}
+a.sub_item {
+    display: block;
+    margin: 0 32px;
+    padding: 20px 0 30px;
+    font-size: 15px;
+    position: relative;
+    color: #111111;
+}
+.drop_sub {
+    display: none;
+    min-width: 1100px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    text-align: center;
+}
+.nav_sub .sub_item:hover + .drop_sub {
+    display: block;
+    justify-content: center;
+    margin-top: -2px;
+}
+.drop_sub > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin-bottom: 50px;
+}
+.sub_item:hover {
+    border-bottom: 2px solid #000;
+    z-index: 999;
+}
+.drop_sub > li {
+    margin-top: 60px;
+}
+.drop_sub > li > a {
+    color: black;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 3;
+}
+.drop_sub > li > ul > li > a {
+    color: black;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    line-height: 3;
+}
+ul.nav_menu #document {
+    background-color: #fede22;
+    border: 1px solid #fede22;
+    border-radius: 22px;
+    padding: 10px 20px;
+}
+.container {
+    margin: 0 auto;
+    position: relative;
+}
+.main_intro {
+    background-color: #fede22;
+    width: 100%;
+    height: 720px;
+    position: relative;
+    top: 0;
+}
+.intro {
+    position: relative;
+    width: 1200px;
+    height: 884px;
+    background: url('../img/main_bg.png') no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+.text_box {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 350px;
+    top: 200px;
+    left: 100px;
+}
+.text_box h3 {
+    position: absolute;
+    color: #111;
+    font-size: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 65px;
+}
+.text_box p {
+    position: absolute;
+    color: #111;
+    font-size: 17px;
+    bottom: 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 30px;
+}
+.download {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+}
+.download li {
+    float: left;
+    color: #333;
+    width: 178px;
+    height: 60px;
+    border-radius: 12px;
+    margin-right: 10px;
+    text-align: center;
+}
+.download a {
+    width: 178px;
+    height: 60px;
+    float: right;
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+}
+.download a::before {
+    content:'';
+    position: absolute;
+    width:30px;
+    height:30px;
+    left:20px;
+    top:13px;
+    background: url('../img/etc.png') no-repeat;
+}
+.download a.google_play::before {
+    background-position: -337px -288px;
+}
+.download a.app_store::before {
+    background-position: -368px -290px;
+}
+.download span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -60%);
+    -webkit-transform: translate(-30%, -60%);
+    white-space: nowrap;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+/* common */
+.main_middle {
+    position: relative;
+    background-color: #fff;
+    height: 750px;
+    width: 1020px;
+    margin: 0 auto;
+}
+.main_middle h3 {
+    font-size: 40px;
+    color: #111111;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+.main_middle p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 30px;
+    letter-spacing: -1px;
+}
+.main_middle span {
+    display: inline-block;
+    font-size: 15px;
+    color: #111111;
+    margin-left: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+.interval {
+    width: 100%;
+    height: 30px;
+    background-color: #fafafa;
+}
+/* 모바일로 더 손쉬운 계좌개설, 간편한 이체 */
+.section1 {
+    position: relative;
+    margin-top: 100px;
+}
+.section1_img img {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 470px;
+}
+.section1_text {
+    position: absolute;
+    right: 50px;
+    top: 220px;
+    width: 400px;
+    height: 300px;
+}
+.section1_click a {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    bottom: 25px;
+    background-color: #f6f6f6;
+    border-radius: 12px;
+}
+/* 우대조건 없이 합리적인 예금과 적금 */
+.section2 {
+    position: relative;
+    margin-top: 100px;
+}
+.section2_text {
+    position: absolute;
+    top: 200px;
+    height: 270px;
+}
+.section2_click {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+.section2_click li {
+    float: left;
+}
+.section2_click a {
+    display: inline-block;
+    width: 160px;  
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #f6f6f6;
+}
+.section2_bottom_img img {
+    position: absolute;
+    width: 470px;
+    top: 520px;
+}
+.section2_right_img img {
+    position: absolute;
+    right: 0;
+    width: 440px;
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!js
+    opacity: 0;
+    transition: all 1.5s ease;
+    */
+}
+.section2_right_img img.on {
+    opacity: 1;
+    transform: translateX(-30px);
+    transition: all 1.5s ease;
+}
+/* 함께 쓰고 같이 보는 모임통장*/
+.section3 {
+    position: relative;
+    margin-top: 100px;
+}
+.section3_img img {
+    position: absolute;
+    left: 0;
+    width: 470px;
+}
+.section3_text {
+    position: absolute;
+    top: 150px;
+    right: 70px;
+    height: 290px;
+}
+.section3_click a {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    bottom: 0;
+    background-color: #f6f6f6;
+    border-radius: 12px;
+    text-align: center;
+}
+/* 함께 도전해서 재미있는 26주적금 */
+.section4 {
+    position: relative;
+    margin-top: 100px;
+}
+.section4_text {
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    height: 290px;
+}
+.section4_click a {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    bottom: 0;
+    background-color: #f6f6f6;
+    border-radius: 12px;
+    text-align: center;
+}
+.section4_img img {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    width: 470px;
+}
+/* 해외계좌송금과 WU빠른해외송금을 더 쉽고, 저렴하게 */
+.section5 {
+    position: relative;
+    height: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+    background-position:left;
+}
+.section5::after {
+    content: url('../img/section5_under.png');
+    position : absolute;
+    right:50%;
+    top:200px;
+    transform: translate(-30%, 0);
+}
+.section5_img img {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    width: 470px;
+    height: 700px;
+    z-index: 999;
+}
+.section5_text {
+    position: absolute;
+    top: 200px;
+    height: 350px;
+    left: 600px;
+}
+.section5_click a {
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    bottom: 0;
+    background-color: #f6f6f6;
+    border-radius: 12px;
+    text-align: center;
+}
+/* 복잡한 서류 제출을 간편하게,내가 원하는 시간에 */
+.section6 {
+    position: relative;
+    background-color: #333b58;
+    width: 100%;
+    height: 930px;
+    min-width: 1020px;
+    text-align: center;
+}
+.section6_text {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    text-align: center;
+}
+.section6_text h3 {
+    font-size: 43px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+.section6_text p {
+    font-size: 15px;
+    color: #a8a8a8;
+    letter-spacing: -1px;
+    margin-bottom: 35px;
+}
+.section6_click li:first-child {
+    margin-left: 150px;
+}
+.section6_click li {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.section6_click a {
+    background-color: #626a85;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+.section6_img img {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 430px;
+    transform: translateX(-50%);
+}
+/* 프렌즈 체크카드, 내가 고르는 선택의 즐거움 */
+.section7 {
+    position: relative;
+    margin-top: 100px;
+}
+.section7_text {
+    position: absolute;
+    height: 280px;
+    top: 50px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.section7_click a {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    bottom: 0;
+    left: 120px;
+    background-color: #f6f6f6;
+    border-radius: 12px;
+    text-align: center;
+}
+.section7_img {
+    position: absolute;
+    bottom: 0;
+    left: 90%;
+    transform: translateX(-90%);
+    width: 800px;
+}
+/* IT 기술로 카카오뱅크를 만들어 갑니다. */
+.section8 {
+    position: relative;
+    background-color: #fafafa;
+    margin-top: 100px;
+    height: 900px;
+}
+.section8_text {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.section8_text h3 {
+    font-size: 43px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #111111;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+.section8_img img {
+    position: absolute;
+    margin-top: 300px;
+    width: 1020px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section8_info {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    width: 1024px;
+    transform: translateX(-50%);
+}
+.section8_info li {
+    margin-right: 30px;
+    float: left;
+}
+.section8_info li:last-child {
+    margin-left: 215px;
+    padding-right: 0;
+    margin-right: 0;
+}    
+.section8_info span {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #111111;
+    text-align: center;
+    margin-left: 20px;
+}
+.section8_info p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 15px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+/* footer */
+footer {
+    background-color: #ebebeb;
+    width: 100%;
+    height: 160px;
+    min-width: 1024px;
+}
+.main_footer {
+    width: 1024px;
+    margin: 0 auto;
+    font-size: 12px;
+    position: relative;
+}
+.footer_info {
+    position: absolute;
+    top: 30px;
+    margin-bottom: 15px;
+    margin-left: -7px;
+}
+.click_info {
+    margin: 0 7px 0 7px;
+    color: #555;
+}
+.bar {
+    border: 1px solid #d4d4d4;
+}
+.footer_contact {
+    position: absolute;
+    top: 60px;
+}
+.calling_number {
+    margin-right: 15px;
+}
+.copyright {
+    font-size: 8px;
+    color: #999999;
+}
+.footer_certification {
+    position: absolute;
+    top: 100px;
+}
+.footer_certification img {
+    width: 60px;
+}
+.footer_certification span {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* footer_sns */
+.footer_sns {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    font-size: 0;
+}
+.social_midea li {
+    float: left;
+    margin-right: 20px;
+}
+.icon_num1 {
+    display: block;
+    width: 10px;
+    height: 21px;
+    background: url('../img/etc.png') no-repeat;
+    background-position: -120px -359px;
+}
+.icon_num2 {
+    display: block;
+    width: 12px;
+    height: 21px;
+    background: url('../img/etc.png') no-repeat;
+    background-position: -140px -359px;
+}
+.icon_num3 {
+    display: block;
+    width: 14px;
+    height: 21px;
+    background: url('../img/etc.png') no-repeat;
+    background-position: -388px -359px;
+}
+.icon_num4 {
+    display: block;
+    width: 25px;
+    height: 26px;
+    background: url('../img/etc.png') no-repeat;
+    background-position: -159px -359px;
+}
+

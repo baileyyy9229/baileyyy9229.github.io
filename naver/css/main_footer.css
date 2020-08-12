@@ -1,0 +1,142 @@
+footer{
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+.footer_wrap{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 74px 0 74px;
+    text-align: center;
+    position: relative;
+}
+
+.footer_logo{
+    position: absolute;
+    left: 30px;
+    top: 76px;
+    width: 63px;
+    height: 13px;
+
+    background: url(../img/footer_logo.png) no-repeat;
+    -webkit-background: url(../img/footer_logo.png) no-repeat;
+    background-size: 63px 13px;
+}
+
+.footer_menu{
+    position: absolute;
+    left: 105px;
+    top: 74px;
+    font-size: 0;
+}
+
+.footer_menu>li{ /* 직계만 내 아들 딸만 자식만 손자나 손자의 자식은 상관없음 */
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+    /* border-right: 1px solid #878890; 이렇게 넣으면 글씨 바로 옆으로 border 선이 오기때문에 X */
+    position: relative;
+}
+
+.footer_menu a{
+    color: #878890;
+}
+
+.footer_menu>li:before{ /* 제휴제안 ㅣ 기업윤리 이렇게 중간에 bar생성 */
+    /*  border선이 바로 안붙게 하기위해서 가상의 공간 생성 */
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -10px;
+    width: 1px;
+    height: 12px;
+    background-color: #878890;
+}
+
+.footer_menu>li:first-child:before{
+    display: none;
+}
+
+.affiliate_box{
+    position: absolute;
+    right: 30px;
+    top: 74px;
+}
+
+.btn_affiliate{
+    padding-right: 26px;
+    position: relative;
+}
+
+.affiliate_box .btn_affiliate:before{ /* + 이모티콘 넣기 */
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../img/sprite.png) no-repeat;
+    -webkit-background-size: 474px 1250px;
+    background-size: 474px 1250px;
+    background-position: -222px -26px; 
+}
+
+ul.affiliate_list{ /* hover or focus 했을 때, 나오는 리스트 박스 */
+    display: none; /* mousehover 하기 전에는 안보여야한다 */
+    position: absolute; /* 부모 affiliate_box 가 이미 absolute 값을 가지고 있기 때문에 따로 선언안해도 딱 붙는다 */
+    left: -91px;
+    bottom: 0px;
+    width: 200px;
+    padding: 27px 0 25px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #dfe0e1; 
+}
+
+.affiliate_item{
+    margin: 13px 0; /* 위아래, 좌우 */
+}
+
+.affiliate_item:first-child{ /* LINE 텍스트 약간 올리기  */
+    margin-top: 0;
+}
+
+.affiliate_item > a{
+    display: block;
+    padding: 0 24px;
+    width: 100%;
+    color: #878890;
+}
+
+.affiliate_item > a span{
+    position: relative;
+}
+
+.affiliate_item > a span:before{ /* 녹색 화살표 이모티콘 넣기 */
+    display: none;
+    content: '';
+    position: absolute; /* span에 position: relative 주는거 잊지말기! */
+    right: -25px;
+    top: -3px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/sprite.png) no-repeat;
+    -webkit-background-size: 474px 1250px;
+    background-size: 474px 1250px;
+    background-position: -104px -68px;
+}
+
+/* hover or focus 했을 때 list 나타나기 */
+.affiliate_item > a:hover,
+.affiliate_item > a:focus{
+    color: #00b843;
+}
+
+.affiliate_box:hover .affiliate_list{ /* 자회사 바로가기 텍스트에 hover 했을 때 리스트 딱 뜨기 */
+    display: block;
+}
+
+.affiliate_item > a:hover span:before,
+.affiliate_item > a:focus span:before{
+	display: block;
+}
